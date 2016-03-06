@@ -11,7 +11,6 @@ We will consider n-gram, tf-idf, and bag of words features.
 <h2>Experiments</h2>
 We will use 10-fold stratified cross-validation on the set of speech transcripts. Features will be selected based on Z-score.
 <h2>References</h2>
-References
 
 "State Of The Union Addresses 1790-2016". State Of The Union. N.p., 2016. Web. 6 Mar. 2016.
 
