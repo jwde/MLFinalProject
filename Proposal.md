@@ -1,5 +1,11 @@
 # Political Sentiment Analysis using State of the Union Transcripts
 
+Jay DeStories
+
+Tufts
+
+jaydestories@gmail.com
+
 <h2>Introduction</h2>
 Political Sentiment analysis has mostly used data from social media sources to analyze political leanings. This paper will focus on rhetoric from political speeches. It will consider the transcripts of State of the Union addresses to build a model to classify political speech as either Democrat-leaning or Republican-leaning. An effective model for political leaning could provide a more objective measure of the neutrality or divisiveness of political speech and would be particularly interesting giving the upcoming presidential election.
 <h2>Classification</h2>
