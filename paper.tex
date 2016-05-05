@@ -1,0 +1,439 @@
+%% This is LaTeX2e input.
+%%
+
+%% The following tells LaTeX that we are using the 
+%% style file amsart.cls (That is the AMS article style
+%%
+\documentclass{amsart}
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage{listings}
+\usepackage{color}
+\usepackage{bbm}
+
+\renewcommand\lstlistingname{Quelltext}
+
+\lstset{
+    language=Python,
+    basicstyle=\small\sffamily,
+    numbers=left,
+    numberstyle=\tiny,
+    frame=tb,
+    tabsize=4,
+    columns=fixed,
+    showstringspaces=false,
+    showtabs=false,
+    keepspaces,
+    commentstyle=\color{red},
+    keywordstyle=\color{blue}
+}
+
+%% This has a default type size 10pt.  Other options are 11pt and 12pt
+%% This are set by replacing the command above by
+%% \documentclass[11pt]{amsart}
+%%
+%% or
+%%
+%% \documentclass[12pt]{amsart}
+%%
+
+%%
+%% Some mathematical symbols are not included in the basic LaTeX
+%% package.  Uncommenting the following makes more commands
+%% available. 
+%%
+
+%\usepackage{amssymb}
+
+%%
+%% The following is commands are used for importing various types of
+%% grapics.
+%% 
+
+%\usepackage{epsfig}  		% For postscript
+%\usepackage{epic,eepic}       % For epic and eepic output from xfig
+
+%%
+%% The following is very useful in keeping track of labels while
+%% writing.  The variant   \usepackage[notcite]{showkeys}
+%% does not show the labels on the \cite commands.
+%% 
+
+%\usepackageshowkeys}
+
+
+%%%%
+%%%% The next few commands set up the theorem type environments.
+%%%% Here they are set up to be numbered section.number, but this can
+%%%% be changed.
+%%%%
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+
+
+%%
+%% If some other type is need, say conjectures, then it is constructed
+%% by editing and uncommenting the following.
+%%
+
+%\newtheorem{conj}[thm]{Conjecture} 
+
+
+%%% 
+%%% The following gives definition type environments (which only differ
+%%% from theorem type invironmants in the choices of fonts).  The
+%%% numbering is still tied to the theorem counter.
+%%% 
+
+\theoremstyle{definition}
+\newtheorem{definition}[thm]{Definition}
+\newtheorem{example}[thm]{Example}
+
+%%
+%% Again more of these can be added by uncommenting and editing the
+%% following. 
+%%
+
+%\newtheorem{note}[thm]{Note}
+
+
+%%% 
+%%% The following gives remark type environments (which only differ
+%%% from theorem type invironmants in the choices of fonts).  The
+%%% numbering is still tied to the theorem counter.
+%%% 
+
+
+\theoremstyle{remark}
+
+\newtheorem{remark}[thm]{Remark}
+
+
+%%%
+%%% The following, if uncommented, numbers equations within sections.
+%%% 
+
+\numberwithin{equation}{section}
+
+
+%%%
+%%% The following show how to make definition (also called macros or
+%%% abbreviations).  For example to use get a bold face R for use to
+%%% name the real numbers the command is \mathbf{R}.  To save typing we
+%%% can abbreviate as
+
+\newcommand{\R}{\mathbf{R}}  % The real numbers.
+
+%%
+%% The comment after the defintion is not required, but if you are
+%% working with someone they will likely thank you for explaining your
+%% definition.  
+%%
+%% Now add you own definitions:
+%%
+
+%%%
+%%% Mathematical operators (things like sin and cos which are used as
+%%% functions and have slightly different spacing when typeset than
+%%% variables are defined as follows:
+%%%
+
+\DeclareMathOperator{\dist}{dist} % The distance.
+
+
+
+%%
+%% This is the end of the preamble.
+%% 
+
+
+\begin{document}
+
+%%
+%% The title of the paper goes here.  Edit to your title.
+%%
+
+%%\title{Probabilistic Password Modeling: Applications of Machine Learning in Predicting Passwords}
+\title{Sentiment Analysis of Political Speeches}
+
+%%
+%% Now edit the following to give your name and address:
+%% 
+
+%\author{Jay DeStories}
+%\email{jaydestories@gmail.com}
+%\urladdr{www.jwde.github.io} % Delete if not wanted.
+
+%%
+%% If there is another author uncomment and edit the following.
+%%
+
+%\author{Second Author}
+%\address{Department of Mathematics, University of South Carolina,
+%Columbia, SC 29208}
+%\email{second@math.sc.edu}
+%\urladdr{www.math.sc.edu/$\sim$second}
+
+%%
+%% If there are three of more authors they are added in the obvious
+%% way. 
+%%
+
+%%%
+%%% The following is for the abstract.  The abstract is optional and
+%%% if not used just delete, or comment out, the following.
+%%%
+
+%\begin{abstract}
+%Natural Language Processing Problem Set 2
+%\end{abstract}
+
+%%
+%%  LaTeX will not make the title for the paper unless told to do so.
+%%  This is done by uncommenting the following.
+%%
+
+\maketitle
+
+\begin{center}
+\small{JAY DESTORIES}\\
+\end{center}
+
+%%
+%% LaTeX can automatically make a table of contents.  This is done by
+%% uncommenting the following:
+%%
+
+%\tableofcontents
+
+%%
+%%  To enter text is easy.  Just type it.  A blank line starts a new
+%%  paragraph. 
+%%
+
+
+
+%%
+%%  To put mathematics in a line it is put between dollor signs.  That
+%%  is $(x+y)^2=x^2+2xy+y^2$
+%%
+
+%%
+%%% Displayed mathematics is put between double dollar signs.  
+%%
+
+
+%%
+%% A Theorem is stated by
+%%
+
+%\begin{thm} The square of any real number is non-negative.
+%\end{thm}
+
+%%
+%% Its proof is set off by
+%% 
+
+
+%%
+%% A new section is started as follows:
+%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}\textbf{Abstract}\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The political affiliations of politicians are no secret, but determining how extreme or moderate someone's views are is a highly opinionated task. In this paper we consider statistical techniques to place individual U.S. political speeches on a continuous scale between Republican and Democrat.\\
+
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Background}
+The goal of political sentiment analysis is to gain insight into political opinions using natural language processing. In the context of this paper, we will consider political speeches, particularly State of the Union addresses, and train probabilistic classifiers to predict political party affiliations. Since probabilistic classifiers can generate probabilities of class association, we can translate the output of such a classifier into a semantic differential ranging from completely Republican to completely Democrat. We will discuss the problem of selecting a set of features which is indicative of political affiliation, as well as training classification algorithms.\\
+\subsection{Naive Bayes}
+Naive Bayes is one of the simplest and most intuitive probabilistic classification algorithms. To assign a class to a data point, we consider all hypothesis classes and pick the one which maximizes the probability of that hypothesis given the data.\\
+Class $\hat{c} = argmax_{h \in classes} P(h \vert D)$\\
+By Bayes' Theorem:\\
+$$P(h \vert D) = \frac{P(D \vert h) \cdot P(h)}{P(D)}$$\\
+So:\\
+$$\hat{c} = argmax_{h \in classes} \frac{P(D \vert h) \cdot P(h)}{P(D)}$$\\
+If we have observed each $h$ $c(h)$ times, then:\\
+$$\forall h \in H, P(h) = \frac{c(h)}{\Sigma_{h \in H} c(h)}$$\\
+$$\implies \hat{c} = argmax_{h \in classes} \frac{P(D \vert h) \cdot \frac{c(h)}{\Sigma_{h \in H} c(h)}}{P(D)}$$\\
+And since $P(D)$ does not vary on $h$,\\
+$$\implies \hat{c} = argmax_{h \in classes} P(D \vert h) \cdot \frac{c(h)}{\Sigma_{h \in H} c(h)}$$\\
+Since our $D$ is a collection of feature values $(f_1, f_2, ..., f_n)$\\
+$$\hat{c} = argmax_{h \in classes} P(f_1, f_2, ..., f_n \vert h) \cdot \frac{c(h)}{\Sigma_{h \in H} c(h)}$$\\
+But it is difficult to compute $P(f_1, f_2, ..., f_n \vert h)$, so we make the "Naive" assumption that $f_1, f_2, ..., f_n$ are independent, so:\\
+$$\hat{c} = argmax_{h \in classes} \Pi_i P(f_i \vert h) \cdot \frac{c(h)}{\Sigma_{h \in H} c(h)}$$\\
+This is much easier to compute, since we can just count the frequency of observing each feature value within observations that have the hypothesis class.\\
+
+\subsection{ID3 Decision Tree}
+Decision trees are classification algorithms which recursively partition training data based on feature values until each partition contains elements belonging to only one class or a maximum depth has been reached. At that point, the majority class in each final partition is chosen as the decision for that path. These partitions form a tree which can be used to classify unknown samples by putting the set containing that sample through the same partition scheme until it reaches a final decision. There are many possible choices for how exactly to partition the data. The partitioning algorithm we will focus on in this paper is ID3.\\
+For ID3 tree-building, we consider splitting on one feature at a time. For each feature, we partition the current pool of observations based on the feature value, then do a weighted sum of the entropy of each new partition. The feature with the lowest total entropy is chosen for the partition.\\
+Note: Since not all feature values may be present in the training data, when, during classification, we encounter a split in the decision tree which doesn't have a path for a sample's feature value, we partition the sample down all paths and recurse, then make a final decision based on the majority class of the training data in all final partitions reached.\\
+\subsection{Random Forest}
+Although decision trees can have a probabilistic output when limiting depth, we can improve the granularity and accuracy of the model through ensemble learning. Random forests use a technique called bagging to combine many decision trees into a single model. The available training data is partitioned, then each partition is used to train a decision tree, which casts a vote based on its own probabilistic classification of unknown data toward the final decision made by the ensemble. In this paper, we will partition training data by partitioning the feature set into distinct sets of features, one per decision tree. Each decision tree will train on all observed samples with its own subset of the the total feature set. We will weigh each decision tree equally, so the class probabilities for any given sample for the random forest are just the average of the class probabilities over all the trees in the forest.\\
+
+\section{Related Work}
+There exists research in the area of political sentiment analysis using data from social media sources, with the motivation of improving or replacing current polling systems (Bakliwal et al. 2013). In those cases, classification techniques including naive Bayes and support vector machines have been used with some success. Notable difficulties in political sentiment analysis on social media include recognizing sarcasm (Bakliwal et al. 2013) and spelling errors. It is reasonable to expect fewer of these kinds of problems when analyzing State of the Union addresses, however the motivation of better polling no longer makes sense when analyzing speeches. If we can produce a successful probabilistic classifier for political speech, it can be used to objectively rank U.S. political speeches by party leaning, which would be interesting in order to track how individual politicians change views over time or to compare candidates in election cycles.\\
+
+\section{Method}
+\subsection{The Data}
+We will consider every State of the Union address given between 1934 and 2016. It is reasonable to expect these speeches to contain very low rates of sarcasm and misspellings. Hopefully these speeches are sufficiently representative of speeches from the Republican and Democratic parties to create an accurate generalized model for speech classification.\\
+\subsection{Preprocessing}
+Following the standard used for preprocessing by Kummer \& Savoy (2012), we tokenize the sentences and words in every speech, then replace every word occuring fewer than 4 times with an unknown token. We pad the start and end of every sentence with start and end tokens so that n-grams can represent words and phrases being at the start or end of a sentence.\\
+
+\subsection{Feature Generation}
+We consider n-gram, binary bag-of-words (bbow), and term frequency-inverse document frequency (tf-idf) features.\\
+Before considering the effectiveness of any individual feature, we generate the feature values for all possible n-grams of length $1$, $2$, $3$, or $4$, all bbow features, and all tf-idf features. This is a simple task of counting all words and short sequences of words in the dataset.\\
+On the State of the Union dataset, we end up with $974,083$ features before any filtering.\\
+
+\subsection{Feature Selection}
+First, we eliminate any features which are not present in at least 6 of the speeches. Although some of these features may help us get higher accuracy, they are more likely to overfit around a small number of speeches, and we want the classifier to be generalizable.\\
+At this point, we have $37,608$ features. Now, for each feature, we find a split which maximizes the information gain of partitioning that feature at that threshold (as in a binary decision stub), and binarize the feature based on that split. As shown by Fayyad \& Irani (1992), these splits must occur between two observations belonging to different classes. Therefore, we can sort the data on a feature value and calculate the entropy only at boundaries between classes. Since each information gain-maximizing split can occur at any point between the two adjacent values $a, b$, we (arbitrarily) pick the point half-way in between $a$ and $b$.\\
+Finally, we sort the set of binarized features by information gain and select the top $1000$ features to train our models.\\
+
+\subsection{Classification}
+\subsubsection{Models}
+As a baseline, we classify all speeches as more Democratic. Since the majority of the speeches given between 1934 and 2016 were given by Democrats, this is the binary equivalent to a classifier considering only the prior probability of each class.\\
+We also consider a naive Bayes model, a binary ID3 decision tree model with several different maximum depth settings, and a random forest model. The random forest model uses the binary ID3 decision tree model and one of several maximum depth settings for each tree. Oshiro, Perez, \& Baranauskas (2012) suggest that the optimal number of trees in a random forest is generally between 64 and 128. We will try several values in that range.\\
+\subsubsection{Testing}
+We use 5-fold stratified cross-validation on the State of the Union dataset, and take the average accuracy over all folds for each model.\\
+
+\section{Results}
+\begin{center}
+\begin{tabular}{||c c c c||}
+\hline
+Model & Max Depth & \# Trees & Accuracy
+\\ [0.5ex]
+\hline\hline
+Baseline & N/A & N/A & 57.00\%\\
+\hline
+Naive Bayes & N/A & N/A & 50.07\%\\
+\hline
+ID3 Decision Tree & 5 & N/A & 65.05\%\\
+\hline
+ID3 Decision Tree & 10 & N/A & 58.45\%\\
+\hline
+ID3 Decision Tree & 20 & N/A & 60.47\%\\
+\hline
+ID3 Decision Tree & 40 & N/A & 57.00\%\\
+\hline
+ID3 Decision Tree & 80 & N/A & 61.93\%\\
+\hline
+Random Forest & 5 & 64 & 88.42\%\\
+\hline
+Random Forest & 5 & 80 & 81.48\%\\
+\hline
+Random Forest & 5 & 96 & 76.62\%\\
+\hline
+Random Forest & 5 & 112 & 68.71\%\\
+\hline
+Random Forest & 5 & 128 & 61.78\%\\
+\hline
+Random Forest & 10 & 64 & 92.92\%\\
+\hline
+Random Forest & 10 & 80 & 87.24\%\\
+\hline
+Random Forest & 10 & 96 & 80.16\%\\
+\hline
+Random Forest & 10 & 112 & 72.18\%\\
+\hline
+Random Forest & 10 & 128 & 65.17\%\\
+\hline
+Random Forest & 20 & 64 & 94.31\%\\
+\hline
+Random Forest & 20 & 80 & 88.42\%\\
+\hline
+Random Forest & 20 & 96 & 82.30\%\\
+\hline
+Random Forest & 20 & 112 & 72.25\%\\
+\hline
+Random Forest & 20 & 128 & 65.25\%\\
+\hline
+Random Forest & 40 & 64 & 90.64\%\\
+\hline
+Random Forest & 40 & 80 & 89.40\%\\
+\hline
+Random Forest & 40 & 96 & 77.96\%\\
+\hline
+Random Forest & 40 & 112 & 73.65\%\\
+\hline
+Random Forest & 40 & 128 & 66.09\%\\
+\hline
+Random Forest & 80 & 64 & 95.42\%\\
+\hline
+Random Forest & 80 & 80 & 86.05\%\\
+\hline
+Random Forest & 80 & 96 & 79.06\%\\
+\hline
+Random Forest & 80 & 112 & 71.28\%\\
+\hline
+Random Forest & 80 & 128 & 63.93\%\\
+[1ex]
+\hline
+\end{tabular}
+\end{center}
+
+Naive Bayes failed to outperform even the baseline, and the ID3 decision tree barely outperformed the baseline. However, the random forest model achieved accuracy above 90\% with multiple settings. The best maximum depth / number of trees settings based on these results are maximum depth of 80 and 64 trees, which achieved an accuracy of 95.42\%. Based on these results, random forests are clearly an excellent candidate to use to generate the semantic differential for political affiliation.\\
+
+\section{Applications}
+Now that we have an accurate probabilistic classifier for U.S. political affiliation, we can use it to place speeches on a scale between Republican and Democrat. If we define Republican as $0$ and Democrat as $1$, then the affiliation value $a(s)$ of each speech $s$ is given by $a(s) = P(Democrat \vert s)$. This makes sense because as the probability of the speech being given by a Democrat increases, $a(s)$ gets closer to $1$. Since the classifier is a random forest, it doesn't matter if we define $a(s)$ this way or as $a(s) = 1 - P(Republican \vert s)$ because $P(Democrat \vert s) + P(Republican \vert s) = 1$.\\
+One interesting application of the $a(s)$ statistic is to compare U.S. polititians in an election. This model provides an unbiased heuristic for the degree to which a polititian's rhetoric aligns with either the Democratic or Republican party.\\
+Another interesting use of this statistic is to compare a polititian's rhetoric at one point in time with another point in time. By looking at $a(s)$, or the average of $a(s)$ over multiple speeches during certain periods of time, we could see how consistent individual polititians are. We could compare rhetoric during and out of election cycles as well as over larger periods of time to get a measure of rhetorical consistency or development.\\
+
+\section{Future Work}
+These results are encouraging, but would be more interesting given a comprehensive dataset of political speeches to apply the model to. The clear next step is to compile such a dataset and evaluate the affiliation of speeches.\\
+Although we achieved high accuracy with a random forest model, it would be interesting to see if this could be improved further with tweaks to the random forest voting or partitioning techniques. In this paper, each tree has an equal vote. This does not necesarrily have to be true. We could weigh votes based on tree accuracy in predicting party affiliations in the training set. We could also try other partitioning criteria such as perceptrons.\\
+We train the naive Bayes model using maximum likelihood estimates for our probabilities, however it may be advantageous to instead use a markov chain monte carlo (MCMC) technique such as Gibbs sampling for training. It would be interesting to see if results with naive Bayes improve when training with Gibbs sampling.\\
+Other research on sentiment analysis often considers support vector machines (SVM) as a classifier. It would be worth trying SVM in the future to see if we can beat the accuracy of the random forest.\\
+
+\section{Conclusion}
+The performance of random forests at political sentiment classification of State of the Union addresses is very encouraging and warrants further exploration into applications of the random forest model and others in semantic differential analysis of political speeches. Given a lack of unbiased data on how relatively moderate/extreme different speeches are, it is hard to evaluate that application, but its results are nevertheless interesting as a heuristic.\\
+
+\newpage
+
+\begin{thebibliography}{9}
+\bibitem{latexcompanion}
+"State Of The Union Addresses 1790-2016". State Of The Union. N.p., 2016. Web. 6 Mar. 2016.
+
+\bibitem{latexcompanion}
+Bakliwal, Akshat et al. "Sentiment Analysis Of Political Tweets: Towards An Accurate Classifier". \textit{Proceedings of the Workshop on Language in Social Media (LASM 2013)} (2013): 49-58. Print.
+
+\bibitem{latexcompanion}
+Chan, Jonathan Cheung-Wai, and Desiré Paelinckx. "Evaluation of Random Forest and Adaboost Tree-based Ensemble Classification and Spectral Band Selection for Ecotope Mapping Using Airborne Hyperspectral Imagery." \textit{Remote Sensing of Environment 112.6} (2008): 2999-3011. Web.
+
+\bibitem{latexcompanion}
+Fayyad, Usama M., and Keki B. Irani. "On the Handling of Continuous-valued Attributes in Decision Tree Generation." \textit{Mach Learn Machine Learning 8.1} (1992): 87-102. Web.
+
+\bibitem{latexcompanion}
+Ho, Tin Kam. "Random Decision Forests." \textit{Proceedings of 3rd International Conference on Document Analysis and Recognition}. Web.
+
+\bibitem{latexcompanion}
+Hsu, Chih-Wei, Chih-Chung Chang, and Chih-Jen Lin. "A Practical Guide to Support Vector Classification." (2010): n. pag. Web. 3 May 2016.
+
+\bibitem{latexcompanion}
+Kummer, Olena, and Jacques Savoy. "Feature Selection In Sentiment Analysis". \textit{CORIA} (2012): 273-284. Print.
+
+\bibitem{latexcompanion}
+Oshiro, Thais Muyami, Pedro Santoro Perez, and José Augusto Baranauskas. "How Many Trees in a Random Forest?" \textit{Machine Learning and Data Mining in Pattern Recognition Lecture Notes in Computer Science} (2012): 154-68. Web.
+
+\bibitem{latexcompanion}
+Resnik, Philip, and Eric Hardisty. "Gibbs Sampling For The Uninitiated". (2010): 1-22. Print.
+
+\bibitem{latexcompanion}
+Strobl, Carolin, James Malley, and Gerhard Tutz. "An Introduction to Recursive Partitioning: Rationale, Application, and Characteristics of Classification and Regression Trees, Bagging, and Random Forests." \textit{Psychological Methods 14.4} (2009): 323-48. Web.
+
+\end{thebibliography}
+
+\newpage
+
+\end{document}
