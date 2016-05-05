@@ -246,7 +246,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{center}\textbf{Abstract}\end{center}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The political affiliations of politicians are no secret, but determining how extreme or moderate someone's views are is a highly opinionated task. In this paper we consider statistical techniques to place individual U.S. political speeches on a continuous scale between Republican and Democrat.\\
+The political affiliations of politicians are no secret, but determining how extreme or moderate someone's views are is a highly subjective task. In this paper we consider statistical techniques to place individual U.S. political speeches on a continuous scale between Republican and Democrat.\\
 
 
 \newpage
@@ -392,7 +392,7 @@ Another interesting use of this statistic is to compare a polititian's rhetoric 
 
 \section{Future Work}
 These results are encouraging, but would be more interesting given a comprehensive dataset of political speeches to apply the model to. The clear next step is to compile such a dataset and evaluate the affiliation of speeches.\\
-Although we achieved high accuracy with a random forest model, it would be interesting to see if this could be improved further with tweaks to the random forest voting or partitioning techniques. In this paper, each tree has an equal vote. This does not necesarrily have to be true. We could weigh votes based on tree accuracy in predicting party affiliations in the training set. We could also try other partitioning criteria such as perceptrons.\\
+Although we achieved high accuracy with a random forest model, it would be interesting to see if this could be improved further with tweaks to the random forest voting or partitioning techniques. In this paper, each tree has an equal vote. This does not necesarrily have to be true. We could weigh votes based on tree accuracy in predicting party affiliations in the training set. We could also try other partitioning criteria.\\
 We train the naive Bayes model using maximum likelihood estimates for our probabilities, however it may be advantageous to instead use a markov chain monte carlo (MCMC) technique such as Gibbs sampling for training. It would be interesting to see if results with naive Bayes improve when training with Gibbs sampling.\\
 Other research on sentiment analysis often considers support vector machines (SVM) as a classifier. It would be worth trying SVM in the future to see if we can beat the accuracy of the random forest.\\
 
